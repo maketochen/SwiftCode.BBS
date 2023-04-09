@@ -1,7 +1,7 @@
 ﻿using SwiftCode.BBS.IServices;
 using SwiftCode.BBS.Repostories;
 
-namespace SWiftCode.BBS.Services
+namespace SwiftCode.BBS.Services
 {
     public class CalculateService : ICalculateService
     {

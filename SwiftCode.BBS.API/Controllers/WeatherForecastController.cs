@@ -1,5 +1,6 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using SwiftCode.BBS.Model;
+using SwiftCode.BBS.Model.Models;
 
 namespace SwiftCode.BBS.API.Controllers
 {
@@ -26,7 +27,8 @@ namespace SwiftCode.BBS.API.Controllers
         /// 获取天气
         /// </summary>
         /// <returns></returns>
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet]
+        [Authorize(Policy = "Admin")]
         public IEnumerable<WeatherForecast> Get()
         {
             _logger.LogInformation("logging -----Start GetWeatherForecast");

@@ -1,11 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>..\SwiftCode.BBS.Model\SwiftCode.BBS.Model.xml</DocumentationFile>
+    <DocumentationFile>.\SwiftCode.BBS.Model\SwiftCode.BBS.Model.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SwiftCode.BBS.Model\SwiftCode.BBS.Model.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>

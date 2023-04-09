@@ -13,7 +13,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>..\SwiftCode.BBS.API\SwiftCode.BBS.API.xml</DocumentationFile>
+    <DocumentationFile>.\SwiftCode.BBS.API\SwiftCode.BBS.API.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -25,11 +25,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.6" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SwiftCode.BBS.Common\SwiftCode.BBS.Common.csproj" />
+    <ProjectReference Include="..\SwiftCode.BBS.IServices\SwiftCode.BBS.IServices.csproj" />
     <ProjectReference Include="..\SwiftCode.BBS.Model\SwiftCode.BBS.Model.csproj" />
+    <ProjectReference Include="..\SWiftCode.BBS.Services\SwiftCode.BBS.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SwiftCode.BBS.API\SwiftCode.BBS.API.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
